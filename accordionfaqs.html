@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/s8CyrcleInfoBox.css">
+        <title>Infographic</title> 
+
+        <style>
+            .wStyle {
+                border: 3px dashed rgb(250, 132, 64);
+            }
+
+            .fStyle {
+                background-color: rgb(250, 132, 64);
+                color: #fff;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="example">
+            <ul class="circleWrapper wStyle">
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f1">
+                    Name
+                </div>
+                <div class="circleBox" id="f1">
+                    Sir Tyrone Raphael Joseph Vargas
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f2">
+                  Major
+                </div>
+                <div class="circleBox" id="f2">
+                  Computer Science
+                </div>
+              </li>
+              <li>
+                <div class="circleFeature fStyle" data-cyrcleBox="f3">
+                  Favorite Hobby
+                </div>
+                <div class="circleBox" id="f3">
+                  Football/Soccer
+                </div>
+              </li>
+              ...
+            </ul>
+          </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/s8CyrcleInfoBox.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+            $(function(){ 
+                $(".example").s8CircleInfoBox();
+            });
+
+            $(".example").s8CircleInfoBox({
+                autoSlide: true,
+                slideSpeed: 3000,
+                notResponsive: false,
+                action: "mouseover",
+                responsive: true,
+                breakpoint: 760, 
+                hoverStyle: "circleSelect",
+                spreadStyle: "all",
+            });
+        </script>
+    </body>
+</html>

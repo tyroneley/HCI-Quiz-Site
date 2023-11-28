@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/animsition.min.css">
+        <title>Week 8</title> 
+    </head>
+    <body>
+        <div class="animsition">
+            <div class="menu_box">
+                <div class="container-lg">
+                    <div class="row justify-content-center">
+                        <div class="co-md-5 text-center text-md-start">
+                            <h2 class="text-primary text-center">
+                            Menu
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container-lg">
+                    <div class="mb-3">
+                        <a href="accordionfaqs.html">
+                            <button type="button" class="btn btn-primary btn-lg">Infographic</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/animsition.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".animsition").animsition({
+                    inClass: 'rotate-in',
+                    outClass: 'rotate-out',
+                    inDuration: 1500,
+                    outDuration: 800,
+                    linkElement: '.animsition-link',
+                    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+                    loading: true,
+                    loadingParentElement: 'body', //animsition wrapper element
+                    loadingClass: 'animsition-loading',
+                    loadingInner: '', // e.g '<img src="loading.svg" />'
+                    timeout: false,
+                    timeoutCountdown: 5000,
+                    onLoadEvent: true,
+                    browser: [ 'animation-duration', '-webkit-animation-duration'],
+                    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+                    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+                    overlay : false,
+                    overlayClass : 'animsition-overlay-slide',
+                    overlayParentElement : 'body',
+                    transition: function(url){ window.location.href = url; }
+                });
+            });
+        </script>
+    </body>
+</html>
